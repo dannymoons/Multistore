@@ -561,8 +561,8 @@ position:absolute;
 }
 
 #carousel-example-2 > div > div.carousel-item.active > div.view > img {
-  -webkit-animation: ken-burns-in 8s 1 ease-in-out forwards;
-animation: ken-burns-in 8s 1 ease-in-out forwards;
+  -webkit-animation: ken-burns-in 6s 1 ease-in-out forwards;
+animation: ken-burns-in 6s 1 ease-in-out forwards;
 transition:
 }
 
