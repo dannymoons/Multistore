@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <meta name="robots" content="noindex,nofollow">
+
 </head>
 
 <body>
@@ -26,8 +28,31 @@
     <div class="blog-title">
       <div class="container wow fadeInUp">
         <h1>This is a blogpost</h1>
-        <p class="blog-breadcrumb"> Home / Categorie / <strong>This is a blog</strong></p>
+        <div class="blog-breadcrumb">
+          <!-- <button type="button" class="btn btn-back btn-sm ml-0" href="javascript:history.go(-1)">Terug</button> -->
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com">
+                     <span itemprop="name">Home</span></a>
+                 <meta itemprop="position" content="1" />
+               </li>
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com/shop/">
+                     <span itemprop="name">Categorie</span></a>
+                 <meta itemprop="position" content="2" />
+               </li>
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com/shop/">
+                     <span itemprop="name">Naam van de blog</span></a>
+                 <meta itemprop="position" content="3" />
+               </li>
+
+        </ol>
       </div>
+     </div>
     </div>
   </header>
 
@@ -176,6 +201,28 @@
 
 
           </form>
+
+          <div class="social-buttons text-center mt-5 smooth-scroll">
+            <h4 class="mb-3">Volgs ons op Social Media</h4>
+            <!--Facebook-->
+            <a class="btn btn-sm btn-fb mr-1 my-0 waves-effect waves-light" role="button" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>"
+              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!--Twitter-->
+            <a class="btn btn-sm btn-ins" mr-1 my-0 waves-effect waves-light" role="button" href="https://twitter.com/intent/tweet/?text=<?php the_title() ?> + <?php echo home_url($wp->request) ?>"
+              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!--Linkedin-->
+            <a class="btn btn-sm btn-li mr-1 my-0 waves-effect waves-light" role="button" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo home_url($wp->request) ?>"
+              onclick="event.preventDefault();window.open(this.href, 'Share', 'width=500,height=500,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes')">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+          </div>
           <!-- Default form subscription -->
 
 

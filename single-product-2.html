@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="robots" content="noindex,nofollow">
+
   <title>Blogs</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
@@ -23,11 +25,37 @@
 <body>
 
   <header>
-    <div class="blog-title">
+    <div class="product-title">
       <div class="container wow fadeInUp">
         <h1>Voorbeeld product</h1>
-        <p class="blog-breadcrumb"> Home / Category / <strong>This is a blog</strong></p>
-      </div>
+        <div class="shop-breadcrumb">
+          <button type="button" class="btn btn-back btn-sm ml-0" href="javascript:history.go(-1)">Terug</button>
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com">
+                     <span itemprop="name">Home</span></a>
+                 <meta itemprop="position" content="1" />
+               </li>
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com/shop/">
+                     <span itemprop="name">Shop</span></a>
+                 <meta itemprop="position" content="2" />
+               </li>
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com/shop/">
+                     <span itemprop="name">Categorie</span></a>
+                 <meta itemprop="position" content="3" />
+               </li>
+               <li itemprop="itemListElement" itemscope
+                   itemtype="https://schema.org/ListItem">
+                 <a itemprop="item" href="https://www.yourpopupstore.com/shop/">
+                     <span itemprop="name">Product naam</span></a>
+                 <meta itemprop="position" content="4" />
+               </li>
+      </ol>      </div>
     </div>
   </header>
 
@@ -241,7 +269,23 @@
 
     <p class="intro-detail">Verkoper: <a href="#">Naam winkel</a></p>
     <hr>
-<p>Aantal</p>
+    <select class="mdb-select md-form mb-0">
+      <option value="" disabled selected>Kies je maat</option>
+      <option value="1">Maat 34</option>
+      <option value="2">Maat 36</option>
+      <option value="3">Maat 38</option>
+      <option value="4">Maat 40</option>
+      <option value="5">Maat 42</option>
+      <option value="6">Maat 44</option>
+    </select>
+    <select class="mdb-select md-form">
+      <option value="" disabled selected>Kies je kleur</option>
+      <option value="1">Rood</option>
+      <option value="2">Groen</option>
+      <option value="3">Blauw</option>
+
+    </select>
+    <p>Aantal</p>
     <div class="def-number-input number-input safari_only">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
         class="minus"></button>
@@ -252,6 +296,7 @@
     <div class="mt-4">
     <button type="button" class="btn btn-primary ml-0">Toevoegen <i class="fas fa-cart-plus ml-2"></i></button>
     <button type="button" class="btn btn-product"><i class="fas fa-heart"></i></button>
+    <p class="mt-2">Verwachte levertijd: 3-4 werkdagen</p>
     </div>
   </div>
   <div class="card mt-5 p-4">
@@ -480,6 +525,10 @@
     $(document).ready(() => {
       new WOW().init();
     });
+    // Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});
   </script>
 </body>
 
