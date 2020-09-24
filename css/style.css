@@ -1,8 +1,9 @@
-*,html,p,a,.btn {
-  font-family: Montserrat;
+*,p,a,.btn {
+  font-family: 'Montserrat';
+  font-weight:300;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-weight:700;
 }
 p {
@@ -186,8 +187,17 @@ filter: brightness(65%);
   font-family: 'Montserrat';
   font-weight: 700;
 }
+.card.registerShop {
+  padding:1.5rem;
+  max-width:550px;
+  margin:auto;
+}
+.registerShop .md-form, .registerShop .md-form .validate {
+  margin:0.5rem 0;
+}
 .btn-primary {
   background-color: #f08300!important;
+  margin:.375rem 0;
 }
 .btn-outline-primary {
   color:#f08300!important;
@@ -200,7 +210,6 @@ border: 1px solid #f08300 !important;
 box-shadow:none;
 -webkit-box-shadow:none;
 }
-
 .btn-add-card {
   background-color: #f08300;
   color:#fff;
@@ -236,7 +245,6 @@ box-shadow:none;
         height: 47px;
         margin:3px;
 }
-
 .btn-product {
   background-color:#e0e0e0;
   color:#000;
@@ -257,6 +265,24 @@ box-shadow:none;
   border-radius: .25rem;
   font-weight: 500;
   box-shadow:none;
+}
+.btn-icon {
+  color:#f08300;
+  font-weight:700;
+}
+.btn-icon:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+content:'\f061';
+  margin-left:8px;
+  transition: .2s ease-in-out;
+}
+.btn-icon:hover {
+  color:#f08300;
+  filter: brightness(0.8);
+}
+.btn-icon:hover:after {
+  margin-left:18px;
 }
 
 /****************/
@@ -359,7 +385,9 @@ margin-top: -.3rem;
 }
 }
 }
-
+input.btn.btn-primary:hover,input.btn.btn-primary:focus, input.btn.btn-primary:active {
+  box-shadow:none;
+}
 .shop-card {
   border-radius: 0.375rem;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,.05);
@@ -398,7 +426,7 @@ position:absolute;
   overflow: hidden;
   position: relative;
 }
-.category-img {
+.category-img{
   border-radius: 0.375rem;
   filter: brightness(70%);
   max-width:100%;
@@ -421,13 +449,12 @@ transition: 0.2s ease-in-out;
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   border-radius: 0.375rem;
   color: white;
   margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
-  min-height:250px;
+  /* min-height:250px; */
 }
 .case-img {
   position: fixed;
@@ -443,7 +470,7 @@ transition: 0.2s ease-in-out;
   transform:scale(1.1);
 }
 .case-card h3 {
-  font-size:1.5rem;
+  font-size:1.2rem;
   bottom:20px;
   left:20px;
   margin: 0px;
@@ -779,6 +806,24 @@ font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
 .blurb-usp .blurb-content {
   float:right;
   width:calc(100% - 30px);
+}
+ul.usp {
+  padding:0px;
+}
+ul.usp  li {
+  color:#666;
+  list-style:none;
+  margin-bottom:20px;
+}
+ul.usp li:before {
+  font-family:"Font Awesome 5 Free";
+  content:'\f058';
+  color:#3c3;
+  float:left;
+  font-weight:900;
+  font-size:1.4rem;
+  margin-right:10px;
+  margin-top:-4px;
 }
 .mt-90 {
   margin-top: 90px;
