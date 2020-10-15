@@ -106,12 +106,14 @@ color:#fff;
   position:relative;
   padding:20px;
   text-align:center;
-  width:400px;
+  width:350px;
 }
-@media only screen and (min-width:981px){
+@media only screen and (max-width:600px) {
   .extra-links {
+    width:90%;
   }
 }
+
 .extra-links ul {
   padding:0px;
   margin:20px 0px 0px;
@@ -145,6 +147,7 @@ filter: brightness(65%);
 }
 
 /* CARDS */
+
 .card,.product-cart,.news-card {
   -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
@@ -181,11 +184,11 @@ filter: brightness(65%);
   border-bottom-left-radius: .375rem;
   border-bottom-right-radius: .375rem;
 }
-@media only screen and (max-width:1080px){
+
   .product-card-body,.shop-card-body,.news-card-img-body {
     margin-bottom:30px;
 }
-}
+
 .product-card-price {
   color:#000;
   font-family: 'Montserrat';
@@ -287,6 +290,17 @@ content:'\f061';
 }
 .btn-icon:hover:after {
   margin-left:18px;
+}
+/* Shopping Cart */
+.cart-product-img {
+    border-radius:.375rem;
+  max-width:100%;
+  margin-bottom:20px;
+}
+@media only screen and (max-width:981px){
+  .cart-product-img {
+    max-width:150px;
+  }
 }
 
 /****************/
@@ -499,22 +513,6 @@ transition: 0.2s ease-in-out;
   background-color: #f08300;
   color:#fff;
 }
-/* .parallax-center {
-  color:#fff;
-  min-height:500px;
-  text-align:center;
-  position: relative;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.parallax-center .parallax-content {
-  max-width:800px;
-  margin:auto;
-  color:#fff;
-} */
-
 
 .streak,.streak p {
   color:#fff;
@@ -721,8 +719,6 @@ width:100%;
 /* Parallax */
 .parallax-center {
   color:#fff;
-  /* background: linear-gradient(0deg,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%),
-  url(http://cms.mijnwebdesign.com//backend/gallery/9e8a45a3d0e03766cd38db36f143dab5.jpg); */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -736,7 +732,7 @@ width:100%;
   flex-direction: column;
   justify-content: center;
 }
-.parallax-center-sm {
+/* .parallax-center-sm {
   color:#fff;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -750,15 +746,15 @@ width:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 .parallax-overlay {
   background-color:#000;
-  content:"";
-  height:100%;
+  content:'';
   left:0;
   opacity:0.4;
   position:absolute;
   top:0;
+  height:100%;
   width:100%;
 }
 .parallax-center .parallax-content, .parallax-center-sm .parallax-content{
@@ -770,7 +766,6 @@ width:100%;
   color:#fff;
   margin:0px;
 }
-
 .parallax-title {
   color:#fff;
   margin:auto;
@@ -1006,6 +1001,11 @@ display: inline-block;
   height:400px;
   object-fit:cover;
 }
+@media only screen and (max-width:981px){
+  .product-img {
+    height:220px;
+  }
+}
 .carousel-indicators li {
   opacity:0.4;
 }
@@ -1090,7 +1090,6 @@ margin:0px;
   border-right:2px solid #fff;
   margin-right:30px;
   padding-right:30px;
-
 }
 .shop-logo {
   border-radius:100%;
@@ -1124,6 +1123,23 @@ margin:0px;
 .schema-hours {
   margin-top:20px;
 }
+@media only screen and (max-width:981px){
+  .shop-title {
+    font-size:1.2rem;
+  }
+  .shop-logo-container {
+    border-right:2px solid #fff;
+    margin-right:10px;
+    padding-right:10px;
+  }
+  .shop-logo {
+    border-radius:100%;
+    height:80px;
+    width:80px;
+    object-fit: cover;
+  }
+}
+
 /* CONTACT */
 .contactgegevens {
   color:#fff;
